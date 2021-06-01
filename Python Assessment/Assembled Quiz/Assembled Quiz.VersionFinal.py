@@ -158,7 +158,7 @@ while r>0:
 
 #End game summary, displays user score 
 print("\nYou have succesfully completed Hafidz's Game Quiz!")
-print("Conragulations!",name+", your final score is", score,"out of",total)
+print("Congratulations!",name+", your final score is", score,"out of",total)
 print("That means you answered", (round(score/total*100,2)),"% of the questions correctly!")
 print("\nThanks for playing")
 
