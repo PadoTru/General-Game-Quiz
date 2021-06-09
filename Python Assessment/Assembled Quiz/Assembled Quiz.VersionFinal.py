@@ -142,7 +142,7 @@ while r>0:
                                                 print("                 |Your score is now", score,"|")
                                     else:
                                                 print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                                                print("    Sorry! That's incorrect :( ... Nice Try! Let's going.")
+                                                print("    Sorry! That's incorrect :( ... Nice Try! Let's keep going.")
                                                 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                                                 
                                                 print("                 |Your score is still", score,"|\n")
