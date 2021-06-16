@@ -23,43 +23,42 @@ while True:
        
 #using a function to ask if the user would like to read insturcionts, the variable will be inst
 def instructions():
-            while True:
-                        inst = input("\nWould you like to read the instructions?\na)yes\nb)no\nEnter here: ").lower()
-                        if inst == "yes" or inst == "y" or inst == "yea" or inst == "a":
-                                    print("\n"+lines2, "\nThe rules are simple. Answer the multi choice questions by entering (a/b/c/d).\nFor every question you get right you earn a point!\n"+lines2)
-                                    break
-                        if inst == "no" or inst == "n" or inst == "nah" or inst == "b" :
-                                    break
-                        else:
-                                    print(lines3)
-                                    print("Please enter the options - (a)yes or (b)no")
-                                    print(lines3)
+    while True:
+        inst = input("\nWould you like to read the instructions?\na)yes\nb)no\nEnter here: ").lower()
+        if inst == "yes" or inst == "y" or inst == "yea" or inst == "a":
+            print("\n"+lines2, "\nThe rules are simple. Answer the multi choice questions by entering (a/b/c/d).\nFor every question you get right you earn a point!\n"+lines2)
+            break
+        if inst == "no" or inst == "n" or inst == "nah" or inst == "b" :
+            break
+        else:
+            print(lines3)
+            print("Please enter the options - (a)yes or (b)no")
+            print(lines3)
 
 #using a function to ask if the user would like to play the quiz, the variable will be status
 def status():
-            status = input("\nWould you like to play the quiz?\nEnter (y or yes) to continue or (any key) to exit the quiz : ").lower()
-            if status == "y" or status == "yes":
-                        print("Thank you, we shall begin shortly...")
+    status = input("\nWould you like to play the quiz?\nEnter (y or yes) to continue or (any key) to exit the quiz : ").lower()
+    if status == "y" or status == "yes":
+        print("Thank you, we shall begin shortly...")
 
-            else:
-                        print("Thank you for your time to visit my quiz! :)")
-                        exit()
+    else:
+        print("Thank you for your time to visit my quiz! :)")
+        exit()
 
 #using a function to ask how many rounds/questions the user would like to play through, the variable will be r
 def rounds():
-            global r, total
-            while True:
-                        try:
-                          
-                                    r = int(input("\nPlease enter the number of questions you would like to answer between 1-10: "))
-                                    if 0<r<=10:
-                                                break
-                                    else:
-                                                print(lines3,"\nPlease enter numbers 1-10 only\n"+lines3)
-                        except:
-                                    print(lines3,'\nPlease enter numbers only\n'+lines3)
+    global r, total
+    while True:
+        try:
+            r = int(input("\nPlease enter the number of questions you would like to answer between 1-10: "))
+            if 0<r<=10:
+                break
+            else:
+                print(lines3,"\nPlease enter numbers 1-10 only\n"+lines3)
+        except:
+            print(lines3,'\nPlease enter numbers only\n'+lines3)
 
-            total = r
+    total = r
 
 #using dictionaries in order to store the questions, choices, and answers
 quiz = [
@@ -115,46 +114,46 @@ print("(NOTE: At any time during the quiz, you can type 'xxx' to immediately exi
 print("QUESTIONS")
 
 while r>0:
-            data = quiz[0]
-            q = data[0]
-            data = data[1]
-            answer = data['answer']
-            choice = data['choice']
+    data = quiz[0]
+    q = data[0]
+    data = data[1]
+    answer = data['answer']
+    choice = data['choice']
 
 #printing questions and choices for the user to answer from
-            print("\n"+q)
-            print(choice)
-            while True:
-                        user_answer = input ("Please enter one of the options (a/b/c/d): ").lower().replace(' ','')
+    print("\n"+q)
+    print(choice)
+    while True:
+        user_answer = input ("Please enter one of the options (a/b/c/d): ").lower().replace(' ','')
+        
+#emergency exit feature so the user can exit anytime during the quiz game
+        if user_answer == 'xxx':
+            exit()
 
-                        #emergency exit feature so the user can exit anytime during the quiz game
-                        if user_answer == 'xxx':
-                          exit()
+        #checking if the user answer is correct/incorrect/valid      
+        if user_answer == 'a' or user_answer == 'b' or user_answer == 'c' or user_answer == 'd':
+            if user_answer == answer:
+                print("\n*************************************************************")
+                print("      Great Job! You got it correct! Lets keep it up.")
+                print("*************************************************************")
 
-                        #checking if the user answer is correct/incorrect/valid  
-                        if user_answer == 'a' or user_answer == 'b' or user_answer == 'c' or user_answer == 'd':
-                                    if user_answer == answer:
-                                                print("\n*************************************************************")
-                                                print("      Great Job! You got it correct! Lets keep it up.")
-                                                print("*************************************************************")
-                                                              
-                                                score +=1
-                                                print("                 |Your score is now", score,"|")
-                                    else:
-                                                print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                                                print("      Sorry! That's incorrect...The answer was:", answer+". Nice Try! Let's keep going.")
-                                                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                                                
-                                                print("                                     |Your score is still", score,"|\n")
+                score +=1
+                print("                 |Your score is now", score,"|")
+
+            else:
+                print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                print("      Sorry! That's incorrect...The answer was:", answer+". Nice Try! Let's keep going.")
+                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+                print("                                     |Your score is still", score,"|\n")
 
 #deleting the quiz question so it is not repeated
-                                    del quiz[0]
-                                    r-=1
-                                    break
-                            
-                          
-                        else:
-                                    print("Please enter the alphabet for chosen option")
+            del quiz[0]
+            r-=1
+            break
+
+        else:
+            print("Please enter the alphabet for chosen option")
 
 #End game summary, displays user score 
 print("\nYou have succesfully completed Hafidz's Game Quiz!")
