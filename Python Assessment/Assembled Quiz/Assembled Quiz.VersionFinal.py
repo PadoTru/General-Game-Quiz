@@ -50,13 +50,14 @@ def rounds():
             global r, total
             while True:
                         try:
-                            r = int(input("\nPlease enter the number of questions you would like to answer between 1-10: "))
-                            if 0<r<=10:
-                                break
-                            else:
-                                print(lines3,"\nPlease enter numbers 1-10 only\n"+lines3)
+                          
+                                    r = int(input("\nPlease enter the number of questions you would like to answer between 1-10: "))
+                                    if 0<r<=10:
+                                                break
+                                    else:
+                                                print(lines3,"\nPlease enter numbers 1-10 only\n"+lines3)
                         except:
-                            print(lines3,'\nPlease enter numbers only\n'+lines3)
+                                    print(lines3,'\nPlease enter numbers only\n'+lines3)
 
             total = r
 
@@ -140,11 +141,11 @@ while r>0:
                                                 score +=1
                                                 print("                 |Your score is now", score,"|")
                                     else:
-                                                print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                                                print("    Sorry! That's incorrect :( ... Nice Try! The correct answer is", answer+". Let's keep going.")
-                                                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                                                print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                                                print("      Sorry! That's incorrect...The answer was:", answer+". Nice Try! Let's keep going.")
+                                                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                                                 
-                                                print("                           |Your score is still", score,"|\n")
+                                                print("                                     |Your score is still", score,"|\n")
 
 #deleting the quiz question so it is not repeated
                                     del quiz[0]
