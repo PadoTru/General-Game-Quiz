@@ -50,14 +50,13 @@ def rounds():
             global r, total
             while True:
                         try:
-                          
-                                    r = int(input("\nPlease enter the number of questions you would like to answer between 1-10: "))
-                                    if 0<r<=10:
-                                                break
-                                    else:
-                                                print(lines3,"\nPlease enter numbers 1-10 only\n"+lines3)
+                            r = int(input("\nPlease enter the number of questions you would like to answer between 1-10: "))
+                            if 0<r<=10:
+                                break
+                            else:
+                                print(lines3,"\nPlease enter numbers 1-10 only\n"+lines3)
                         except:
-                                    print(lines3,'\nPlease enter numbers only\n'+lines3)
+                            print(lines3,'\nPlease enter numbers only\n'+lines3)
 
             total = r
 
