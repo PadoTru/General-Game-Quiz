@@ -32,7 +32,7 @@ def instructions():
                                     break
                         else:
                                     print(lines3)
-                                    print("Please enter the options")
+                                    print("Please enter the options - (a)yes or (b)no")
                                     print(lines3)
 
 #using a function to ask if the user would like to play the quiz, the variable will be status
