@@ -145,7 +145,7 @@ while r>0:
                                                 print("    Sorry! That's incorrect :( ... Nice Try! The correct answer is", answer+". Let's keep going.")
                                                 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                                                 
-                                                print("                 |Your score is still", score,"|\n")
+                                                print("                       |Your score is still", score,"|\n")
 
 #deleting the quiz question so it is not repeated
                                     del quiz[0]
