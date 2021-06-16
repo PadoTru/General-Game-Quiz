@@ -141,9 +141,9 @@ while r>0:
                                                 score +=1
                                                 print("                 |Your score is now", score,"|")
                                     else:
-                                                print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                                                print("    Sorry! That's incorrect :( ... Nice Try! Let's keep going.")
-                                                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                                                print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                                                print("    Sorry! That's incorrect :( ... Nice Try! The correct answer is", answer+". Let's keep going.")
+                                                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                                                 
                                                 print("                 |Your score is still", score,"|\n")
 
