@@ -1,13 +1,13 @@
 from random import shuffle
 
 #lines used for aesthetics
-lines1 = ('**********************************************************************')
+lines1 = ('===============================')
 lines2 = ('=========================================================')
-lines3 = ('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+lines3 = ('===============================================================================')
 
 #introduction and disclaimer
 print("INTRO\nTHIS IS A GENERAL KNOWLEDGE GAME QUIZ MADE FOR MY SCHOOL PROJECT. \nIT IS MADE TO TEST YOUR GENERAL KNOWLEDGE ON ALL TYPES OF GAMES AND IS NOT INTENDED TO OFFEND ANY GROUPS OF PEOPLE, CULTURES, VALUES ETC.\nIF THERE ARE ANY PROBLEMS YOU CAN CONTACT ME AT: 19231@students.mrgs.school.nz\nPLEASE HAVE AN ENJOYABLE EXPERIENCE AND THANK YOU FOR TAKING THE TIME TO TRY OUT MY PROGRAM!")
-print(lines1+lines1,"\nLet's Begin!")
+print(lines3+lines2,"\nLet's Begin!")
 
 #using a function to ask for the users name, the variable will be name
 def user_details():
@@ -18,21 +18,21 @@ while True:
         break
 
     else:
-        print("\n"+lines3, "\nPlease Enter Only Letters\n"+lines3,"\n")
+        print("\n"+lines1, "\nPlease Enter Only Letters\n"+lines1,"\n")
        
 #using a function to ask if the user would like to read insturcionts, the variable will be inst
 def instructions():
     while True:
         inst = input("\nWould you like to read the instructions?\na)yes\nb)no\nEnter here: ").lower()
         if inst == "yes" or inst == "y" or inst == "yea" or inst == "a":
-            print("\n"+lines2, "\nThe rules are simple. Answer the multi choice questions by entering (a/b/c/d).\nFor every question you get right you earn a point!\n"+lines2)
+            print("\n"+lines3, "\nThe rules are simple. Answer the multi choice questions by entering (a/b/c/d).\nFor every question you get right you earn a point!\n"+lines3)
             break
         if inst == "no" or inst == "n" or inst == "nah" or inst == "b" :
             break
         else:
-            print(lines3)
+            print(lines2)
             print("Please enter the options - (a)yes or (b)no")
-            print(lines3)
+            print(lines2)
 
 #using a function to ask if the user would like to play the quiz, the variable will be status
 def status():
@@ -53,9 +53,9 @@ def rounds():
             if 0<r<=10:
                 break
             else:
-                print(lines3,"\nPlease enter numbers 1-10 only\n"+lines3)
+                print(lines1,"\nPlease enter numbers 1-10 only\n"+lines1)
         except:
-            print(lines3,'\nPlease enter an integer\n'+lines3)
+            print(lines1,'\nPlease enter an integer\n'+lines1)
 
     total = r
 
@@ -108,7 +108,7 @@ status()
 rounds()
 
 #the actual quiz game starts
-print("\n\n                                                "+lines1,"\n                                                                     HAFIDZ'S GENERAL GAME QUIZ\n                                                "+lines1)
+print("\n\n                                                "+lines1+lines1,"\n                                                                 HAFIDZ'S GENERAL GAME QUIZ\n                                                "+lines1+lines1)
 print("(NOTE: At any time during the quiz, you can type 'xxx' to immediately exit the program)")
 print("QUESTIONS")
 
@@ -132,17 +132,17 @@ while r>0:
         #checking if the user answer is correct/incorrect/valid      
         if user_answer == 'a' or user_answer == 'b' or user_answer == 'c' or user_answer == 'd':
             if user_answer == answer:
-                print("\n*************************************************************")
+                print("\n=============================================================")
                 print("      Great Job! You got it correct! Lets keep it up.")
-                print("*************************************************************")
+                print("=============================================================")
 
                 score +=1
                 print("                 |Your score is now", score,"|")
 
             else:
-                print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                print("\n===================================================================================================")
                 print("      Sorry! That's incorrect...The answer was:", answer+". Nice Try! Let's keep going.")
-                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                print("===================================================================================================")
 
                 print("                                     |Your score is still", score,"|\n")
 
@@ -152,7 +152,7 @@ while r>0:
             break
 
         else:
-            print("\n"+lines2, "\nPlease Enter a valid input\n"+lines2)
+            print("\n"+lines1, "\nPlease Enter a valid input\n"+lines1)
 
 #End game summary, displays user score 
 print("\nYou have succesfully completed Hafidz's Game Quiz!")
@@ -168,12 +168,13 @@ def feedback():
       if 0<f<=5:
         break
       else:
-        print("\n"+lines3,"\nPlease enter numbers 1-5 only\n"+lines3)
+        print("\n"+lines1,"\nPlease enter numbers 1-5 only\n"+lines1)
         
     except:
-      print("\n"+lines3,'\nPlease enter numbers only\n'+lines3)
+      print("\n"+lines1,'\nPlease enter numbers only\n'+lines1)
 feedback()
             
 print("Thank you for the feedback!")
 #exiting program
 exit()
+
