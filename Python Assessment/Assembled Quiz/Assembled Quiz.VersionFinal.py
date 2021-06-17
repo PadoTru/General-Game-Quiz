@@ -1,4 +1,3 @@
-#using import random from python library to shuffle the quiz dictionary later
 from random import shuffle
 
 #lines used for aesthetics
@@ -19,7 +18,7 @@ while True:
         break
 
     else:
-        print(lines3, "\nPlease Enter Only Letters\n"+lines3)
+        print("\n"+lines3, "\nPlease Enter Only Letters\n"+lines3,"\n")
        
 #using a function to ask if the user would like to read insturcionts, the variable will be inst
 def instructions():
@@ -56,7 +55,7 @@ def rounds():
             else:
                 print(lines3,"\nPlease enter numbers 1-10 only\n"+lines3)
         except:
-            print(lines3,'\nPlease enter numbers only\n'+lines3)
+            print(lines3,'\nPlease enter an integer\n'+lines3)
 
     total = r
 
@@ -153,7 +152,7 @@ while r>0:
             break
 
         else:
-            print("Please enter the alphabet for chosen option")
+            print("\n"+lines2, "\nPlease Enter a valid input\n"+lines2)
 
 #End game summary, displays user score 
 print("\nYou have succesfully completed Hafidz's Game Quiz!")
