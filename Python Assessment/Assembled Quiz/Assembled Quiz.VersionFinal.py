@@ -141,7 +141,7 @@ while r>0:
 
             else:
                 print("\n===================================================================================================")
-                print("      Sorry! That's incorrect...The answer was:", answer+". Nice Try! Let's keep going.")
+                print("        Sorry! That's incorrect...The answer was:", answer+". Nice Try! Let's keep going.")
                 print("===================================================================================================")
 
                 print("                                     |Your score is still", score,"|\n")
@@ -177,4 +177,3 @@ feedback()
 print("Thank you for the feedback!")
 #exiting program
 exit()
-
