@@ -44,10 +44,6 @@ quiz = [
  ],
 ]
 
-#using a function to print introduction and disclaimer
-def intro():
-    print("INTRO\nTHIS IS A GENERAL KNOWLEDGE GAME QUIZ MADE FOR MY SCHOOL PROJECT. \nIT IS MADE TO TEST YOUR GENERAL KNOWLEDGE ON ALL TYPES OF GAMES AND IS NOT INTENDED TO OFFEND ANY GROUPS OF PEOPLE, CULTURES, VALUES ETC.\nIF THERE ARE ANY PROBLEMS YOU CAN CONTACT ME AT: 19231@students.mrgs.school.nz\nPLEASE HAVE AN ENJOYABLE EXPERIENCE AND THANK YOU FOR TAKING THE TIME TO TRY OUT MY PROGRAM!")
-    print(lines3+lines2,"\nLet's Begin!")
     
 #using a function to ask for the users name, the variable will be name
 def user_details():
@@ -113,8 +109,11 @@ def feedback():
     except:
       print("\n"+lines1,'\nPlease enter numbers only\n'+lines1)
 
+#print introduction
+print("INTRO\nTHIS IS A GENERAL KNOWLEDGE GAME QUIZ MADE FOR MY SCHOOL PROJECT. \nIT IS MADE TO TEST YOUR GENERAL KNOWLEDGE ON ALL TYPES OF GAMES AND IS NOT INTENDED TO OFFEND ANY GROUPS OF PEOPLE, CULTURES, VALUES ETC.\nIF THERE ARE ANY PROBLEMS YOU CAN CONTACT ME AT: 19231@students.mrgs.school.nz\nPLEASE HAVE AN ENJOYABLE EXPERIENCE AND THANK YOU FOR TAKING THE TIME TO TRY OUT MY PROGRAM!")
+print(lines3+lines2,"\nLet's Begin!")
+
 #calling all the functions
-intro()
 user_details()
 instructions()
 status()
@@ -122,12 +121,10 @@ rounds()
 #shuffling the dictionary
 shuffle(quiz)
 
-#the actual quiz game starts
+#main routine
 print("\n\n\n                                                "+lines1+lines1,"\n                                                                 HAFIDZ'S GENERAL GAME QUIZ\n                                                "+lines1+lines1)
 print("(NOTE: At any time during the quiz, you can type 'xxx' to immediately exit the program)")
 print("QUESTIONS")
-
-#main routine
 while r>0:
     data = quiz[0]
     q = data[0]
